@@ -1,8 +1,8 @@
 // Default donors
 const defaultDonors = [
-    { photo: "1.jpg", name: "සුරංග කොන්ගහ ගෙදර", amount: "00" },
-    { photo: "2.jpeg", name: "ප්‍රබාත්", amount: "000" },
-    { photo: "3.jpg", name: "ප්‍රසන්න ගීත් කුලියාපිටිය", amount: "00" }
+    { photo: "1.jpg", name: "සුරංග කොන්ගහ ගෙදර", description: "" },
+    { photo: "2.jpeg", name: "ප්‍රබාත්", description: "" },
+    { photo: "3.jpg", name: "ප්‍රසන්න ගීත් කුලියාපිටිය", description: "" }
 ];
 
 let donors = [];
@@ -62,7 +62,7 @@ function renderDonors() {
         <div class="donor-card">
             <img src="${donor.photo}" alt="${donor.name}" class="donor-photo" onerror="this.src='https://via.placeholder.com/120'">
             <div class="donor-name">${donor.name}</div>
-            <div class="donor-amount">රු. ${Number(donor.amount).toLocaleString()}</div>
+            <div class="donor-description">${donor.description || '.....'}</div>
             ${isAdminMode ? `<button class="delete-btn" onclick="deleteDonor(${index})">ඉවත් කරන්න / Remove</button>` : ''}
         </div>
     `).join('');
@@ -81,9 +81,9 @@ document.getElementById('donorForm').addEventListener('submit', function(e) {
     
     const photo = document.getElementById('photoUrl').value;
     const name = document.getElementById('donorName').value;
-    const amount = document.getElementById('amount').value;
+    const description = document.getElementById('description').value;
 
-    donors.push({ photo, name, amount });
+    donors.push({ photo, name, description });
     saveDonors();
     renderDonors();
 
@@ -104,9 +104,9 @@ document.getElementById('bulkForm').addEventListener('submit', function(e) {
         const parts = line.split(',').map(part => part.trim());
         
         if (parts.length === 3) {
-            const [photo, name, amount] = parts;
-            if (photo && name && amount && !isNaN(amount)) {
-                donors.push({ photo, name, amount });
+            const [photo, name, description] = parts;
+            if (photo && name && description) {
+                donors.push({ photo, name, description });
                 successCount++;
             } else {
                 errorCount++;
