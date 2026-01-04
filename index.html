@@ -31,6 +31,7 @@
             <h1>දිට්ටා සුලි කුනාටුව හේතුවෙන් විනාශ වු රන්තැටිකන්ද ගම්මානය නැවත ප්‍රතිසංස්කරනය කිරිමට දැනට මුදල් මය ආධාර දුන් පිරිස</h1>
         </div>
 
+
         <div class="admin-panel">
             <h2 class="admin-title">Admin Panel - නව දායකයෙකු එකතු කරන්න / New Donor Add Karanna</h2>
             <form id="donorForm">
@@ -43,8 +44,8 @@
                     <input type="text" id="donorName" placeholder="නම ඇතුලත් කරන්න / Nama Type Karanna" required>
                 </div>
                 <div class="form-group">
-                    <label for="amount">මුදල (රු.) / Mudal (Rs.)</label>
-                    <input type="number" id="amount" placeholder="මුදල ඇතුලත් කරන්න / Mudal Type Karanna" required>
+                    <label for="description">දායකත්ව විස්තර / Donation Description (මුදල් ප්‍රමාණය හෝ අනෙකුත් දායකත්වය)</label>
+                    <input type="text" id="description" placeholder="උදා: වැලි බෑග් 10ක් හෝ සිමෙන්ති බෑග් 5ක්" required>
                 </div>
                 <button type="submit" class="btn">දායකයා එකතු කරන්න / Dayakaya Add Karanna</button>
             </form>
@@ -55,14 +56,15 @@
             <form id="bulkForm">
                 <div class="form-group">
                     <label for="bulkData">දායකයින්ගේ විස්තර / Dayakayinge Vistara (එක් පේළියකට එක් දායකයෙක් / Eka Line Ekata Eka Dayakayak)</label>
-                    <textarea id="bulkData" rows="8" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; font-family: 'Noto Sans Sinhala', sans-serif;" placeholder="1.jpg,සිරිමල් පෙරේරා,5000
-2.jpg,නිමල් සිල්වා,10000
-3.jpg,කමල් ජයසිංහ,7500
+                    <textarea id="bulkData" rows="8" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; font-family: 'Noto Sans Sinhala', sans-serif;" placeholder="1.jpg,සිරිමල් පෙරේරා,වැලි බෑග් 10ක්
+2.jpg,නිමල් සිල්වා,සිමෙන්ති බෑග් 5ක්
+3.jpg,කමල් ජයසිංහ,වැලි ට්‍රක් එකක්
 
 Example Singlish:
-1.jpg,Sirimal Perera,5000
-2.jpg,Nimal Silva,10000"></textarea>
-                    <small style="color: #666; display: block; margin-top: 5px;">Format: ඡායාරූපය,නම,මුදල (comma වලින් වෙන් කරන්න) / Photo,Nama,Mudal (comma valin ven karanna)</small>
+1.jpg,Sirimal Perera,Weli Bag 10k
+2.jpg,Nimal Silva,Cement Bag 5k
+3.jpg,Kamal Jayasinghe,Weli Truck Ekak"></textarea>
+                    <small style="color: #666; display: block; margin-top: 5px;">Format: ඡායාරූපය,නම,දායකත්ව විස්තර (comma වලින් වෙන් කරන්න) / Photo,Nama,Donation Description (comma valin ven karanna)</small>
                 </div>
                 <button type="submit" class="btn">List එක එකතු කරන්න / List Eka Add Karanna</button>
             </form>
@@ -71,6 +73,23 @@ Example Singlish:
         <div class="donors-list">
             <h2 class="donors-title"></h2>
             <div id="donorGrid" class="donor-grid"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h5>වැලි මැටොල් සිමින්ති හෝ මුදල් ලබා දි මේ සදහා ඔබත් දායක වන්න </h5>
+            <h1>ඔබේ සහයෝගය ගමේ ශක්තියයි </h1>
+
+            <img src="3.jpeg" alt="Girl in a jacket" width="500" height="500">
+            <img src="5.jpeg" alt="Girl in a jacket" width="500" height="500">
+            <img src="4.jpeg" alt="Girl in a jacket" width="500" height="500">
+            <img src="6.jpeg" alt="Girl in a jacket" width="500" height="500">
+            <img src="7.jpeg" alt="Girl in a jacket" width="500" height="500">
+            <img src="8.jpeg" alt="Girl in a jacket" width="500" height="500">
+            <img src="9.jpeg" alt="Girl in a jacket" width="500" height="500">
+            <img src="10.jpeg" alt="Girl in a jacket" width="500" height="500">
+            <img src="11.jpeg" alt="Girl in a jacket" width="500" height="500">
         </div>
     </div>
 
