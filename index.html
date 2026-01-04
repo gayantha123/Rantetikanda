@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>රන්තැටිකන්ද දායකයින්</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Overlay -->
+    <div id="loginOverlay" class="login-overlay hidden">
+        <div class="login-box">
+            <h2 class="login-title">Admin Login / Admin Paviseema</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="password">මුරපදය / Password</label>
+                    <input type="password" id="password" placeholder="මුරපදය ඇතුලත් කරන්න / Password Type Karanna" required>
+                </div>
+                <button type="submit" class="btn">ඇතුල් වන්න / Login Wenna</button>
+                <button type="button" class="btn close-btn" onclick="closeLogin()">වසන්න / Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Toggle Button -->
+    <button class="admin-toggle-btn" onclick="showLogin()">⚙️</button>
+
+    <div class="container">
+        <div class="header">
+            <h1>දිට්ටා සුලි කුනාටුව හේතුවෙන් විනාශ වු රන්තැටිකන්ද ගම්මානය නැවත ප්‍රතිසංස්කරනය කිරිමට දැනට මුදල් මය ආධාර දුන් පිරිස</h1>
+        </div>
+
+        <div class="admin-panel">
+            <h2 class="admin-title">Admin Panel - නව දායකයෙකු එකතු කරන්න / New Donor Add Karanna</h2>
+            <form id="donorForm">
+                <div class="form-group">
+                    <label for="photoUrl">ඡායාරූපය / Photo (1.jpg, 2.jpg හෝ URL)</label>
+                    <input type="text" id="photoUrl" placeholder="1.jpg හෝ https://example.com/photo.jpg" required>
+                </div>
+                <div class="form-group">
+                    <label for="donorName">දායකයාගේ නම / Dayakayage Nama</label>
+                    <input type="text" id="donorName" placeholder="නම ඇතුලත් කරන්න / Nama Type Karanna" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">මුදල (රු.) / Mudal (Rs.)</label>
+                    <input type="number" id="amount" placeholder="මුදල ඇතුලත් කරන්න / Mudal Type Karanna" required>
+                </div>
+                <button type="submit" class="btn">දායකයා එකතු කරන්න / Dayakaya Add Karanna</button>
+            </form>
+            
+            <hr style="margin: 30px 0; border: 1px solid #ddd;">
+            
+            <h2 class="admin-title">List එකකින් බොහෝ දායකයින් එකතු කරන්න / List Ekakin Boho Dayakayin Add Karanna</h2>
+            <form id="bulkForm">
+                <div class="form-group">
+                    <label for="bulkData">දායකයින්ගේ විස්තර / Dayakayinge Vistara (එක් පේළියකට එක් දායකයෙක් / Eka Line Ekata Eka Dayakayak)</label>
+                    <textarea id="bulkData" rows="8" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; font-family: 'Noto Sans Sinhala', sans-serif;" placeholder="1.jpg,සිරිමල් පෙරේරා,5000
+2.jpg,නිමල් සිල්වා,10000
+3.jpg,කමල් ජයසිංහ,7500
+
+Example Singlish:
+1.jpg,Sirimal Perera,5000
+2.jpg,Nimal Silva,10000"></textarea>
+                    <small style="color: #666; display: block; margin-top: 5px;">Format: ඡායාරූපය,නම,මුදල (comma වලින් වෙන් කරන්න) / Photo,Nama,Mudal (comma valin ven karanna)</small>
+                </div>
+                <button type="submit" class="btn">List එක එකතු කරන්න / List Eka Add Karanna</button>
+            </form>
+        </div>
+
+        <div class="donors-list">
+            <h2 class="donors-title"></h2>
+            <div id="donorGrid" class="donor-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
