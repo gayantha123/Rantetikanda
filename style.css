@@ -216,10 +216,15 @@ body {
     font-weight: 600;
 }
 
-.donor-amount {
-    font-size: 24px;
-    color: #667eea;
-    font-weight: 700;
+.donor-description {
+    font-size: 18px;
+    color: #4CAF50;
+    font-weight: 600;
+    padding: 8px 12px;
+    background-color: #f0f9f0;
+    border-radius: 8px;
+    margin-top: 10px;
+    border: 1px solid #c8e6c9;
 }
 
 .delete-btn {
@@ -229,7 +234,7 @@ body {
     padding: 8px 16px;
     border-radius: 6px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 14px;
 }
 
@@ -254,5 +259,9 @@ body {
 
     .donor-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .donor-description {
+        font-size: 16px;
     }
 }
