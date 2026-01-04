@@ -2,109 +2,78 @@
 <html lang="si">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-
-
-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>රන්තැටිකන්ද </title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans
-
-+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
     <!-- Login Overlay -->
     <div id="loginOverlay" class="login-overlay hidden">
         <div class="login-box">
-            <h2 class="login-title">Admin Login / Admin 
-
-Paviseema</h2>
+            <h2 class="login-title">Admin Login / Admin Paviseema</h2>
             <form id="loginForm">
                 <div class="form-group">
                     <label for="password">මුරපදය / Password</label>
-                    <input type="password" id="password" 
-
-placeholder="මුරපදය ඇතුලත් කරන්න / Password Type Karanna" 
-
-required>
+                    <input type="password" id="password" placeholder="මුරපදය ඇතුලත් කරන්න / Password Type Karanna" required>
                 </div>
-                <button type="submit" class="btn">ඇතුල් වන්න / Login 
-
-Wenna</button>
-                <button type="button" class="btn close-btn" 
-
-onclick="closeLogin()">වසන්න / Close</button>
+                <button type="submit" class="btn">ඇතුල් වන්න / Login Wenna</button>
+                <button type="button" class="btn close-btn" onclick="closeLogin()">වසන්න / Close</button>
             </form>
         </div>
     </div>
 
     <!-- Admin Toggle Button -->
-    <button class="admin-toggle-btn" onclick="showLogin
-
-()">⚙️</button>
+    <button class="admin-toggle-btn" onclick="showLogin()">⚙️</button>
 
     <div class="container">
         <div class="header">
-            <h1>දිට්ටා සුලි කුනාටුව හේතුවෙන් විනාශ වු රන්තැටිකන්ද 
-
-ගම්මානය නැවත ප්‍රතිසංස්කරනය කිරිමට දැනට මුදල් මය ආධාර 
-
-දුන් පිරිස</h1>
+            <div class="header-gradient">
+                <h1>දිට්ටා සුලි කුනාටුව හේතුවෙන් විනාශ වු රන්තැටිකන්ද ගම්මානය නැවත ප්‍රතිසංස්කරනය කිරිමට දැනට මුදල් මය සහ සහයෝගය දුන් පිරිස</h1>
+            </div>
         </div>
 
 
         <div class="admin-panel">
-            <h2 class="admin-title">Admin Panel - නව දායකයෙකු 
-
-එකතු කරන්න / New Donor Add Karanna</h2>
+            <h2 class="admin-title">Admin Panel - නව දායකයෙකු එකතු කරන්න / New Donor Add Karanna</h2>
             <form id="donorForm">
                 <div class="form-group">
-                    <label for="photoUrl">ඡායාරූපය / Photo (1.jpg, 2.jpg 
-
-හෝ URL)</label>
-                    <input type="text" id="photoUrl" placeholder="1.jpg 
-
-හෝ https://example.com/photo.jpg" required>
+                    <label for="photoUrl">ඡායාරූපය / Photo (1.jpg, 2.jpg හෝ URL)</label>
+                    <input type="text" id="photoUrl" placeholder="1.jpg හෝ https://example.com/photo.jpg" required>
                 </div>
                 <div class="form-group">
-                    <label for="donorName">දායකයාගේ නම / 
-
-Dayakayage Nama</label>
-                    <input type="text" id="donorName" placeholder="නම 
-
-ඇතුලත් කරන්න / Nama Type Karanna" required>
+                    <label for="donorName">දායකයාගේ නම / Dayakayage Nama</label>
+                    <input type="text" id="donorName" placeholder="නම ඇතුලත් කරන්න / Nama Type Karanna" required>
                 </div>
                 <div class="form-group">
-                    <label for="description">දායකත්ව විස්තර / Donation 
-
-Description (මුදල් ප්‍රමාණය හෝ අනෙකුත් දායකත්වය)</label>
-                    <input type="text" id="description" placeholder="උදා: 
-
-වැලි බෑග් 10ක් හෝ සිමෙන්ති බෑග් 5ක්" required>
+                    <label for="description">දායකත්ව විස්තර / Donation Description (මුදල් ප්‍රමාණය හෝ අනෙකුත් දායකත්වය)</label>
+                    <input type="text" id="description" placeholder="උදා: වැලි බෑග් 10ක් හෝ සිමෙන්ති බෑග් 5ක්" required>
                 </div>
-                <button type="submit" class="btn">දායකයා එකතු 
-
-කරන්න / Dayakaya Add Karanna</button>
+                <button type="submit" class="btn">දායකයා එකතු කරන්න / Dayakaya Add Karanna</button>
             </form>
             
             <hr style="margin: 30px 0; border: 1px solid #ddd;">
             
-            <h2 class="admin-title">List එකකින් බොහෝ දායකයින් 
-
-එකතු කරන්න / List Ekakin Boho Dayakayin Add Karanna</h2>
+            <h2 class="admin-title">List එකකින් බොහෝ දායකයින් එකතු කරන්න / List Ekakin Boho Dayakayin Add Karanna</h2>
             <form id="bulkForm">
                 <div class="form-group">
-                    <label for="bulkData">දායකයින්ගේ විස්තර / 
-
-Dayakayinge Vistara (එක් පේළියකට එක් දායකයෙක් / Eka Line 
-
-Ekata Eka Dayakayak)</label>
-                    <textarea id="bulkData" rows="8" style="width: 100%; 
-
-padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 
-
-16px; font-family: 'Noto Sans Sinhala', sans-serif;" 
-
-placeholder="1.jpg,සිරිමල් පෙරේරා,වැලි බෑග් 10ක්
+                    <label for="bulkData">දායකයින්ගේ විස්තර / Dayakayinge Vistara (එක් පේළියකට එක් දායකයෙක් / Eka Line Ekata Eka Dayakayak)</label>
+                    <textarea id="bulkData" rows="8" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 8px; font-size: 16px; font-family: 'Noto Sans Sinhala', sans-serif;" placeholder="1.jpg,සිරිමල් පෙරේරා,වැලි බෑග් 10ක්
 2.jpg,නිමල් සිල්වා,සිමෙන්ති බෑග් 5ක්
 3.jpg,කමල් ජයසිංහ,වැලි ට්‍රක් එකක්
 
@@ -112,17 +81,9 @@ Example Singlish:
 1.jpg,Sirimal Perera,Weli Bag 10k
 2.jpg,Nimal Silva,Cement Bag 5k
 3.jpg,Kamal Jayasinghe,Weli Truck Ekak"></textarea>
-                    <small style="color: #666; display: block; margin-top: 
-
-5px;">Format: ඡායාරූපය,නම,දායකත්ව විස්තර (comma වලින් 
-
-වෙන් කරන්න) / Photo,Nama,Donation Description (comma valin ven 
-
-karanna)</small>
+                    <small style="color: #666; display: block; margin-top: 5px;">Format: ඡායාරූපය,නම,දායකත්ව විස්තර (comma වලින් වෙන් කරන්න) / Photo,Nama,Donation Description (comma valin ven karanna)</small>
                 </div>
-                <button type="submit" class="btn">List එක එකතු 
-
-කරන්න / List Eka Add Karanna</button>
+                <button type="submit" class="btn">List එක එකතු කරන්න / List Eka Add Karanna</button>
             </form>
         </div>
 
@@ -133,42 +94,94 @@ karanna)</small>
     </div>
 
     <div class="container">
-        <div class="header">
-            <h5>වැලි මැටොල් සිමින්ති හෝ මුදල් ලබා දි මේ සදහා 
+        <!-- Enhanced Thank You Text -->
+        <div class="thank-you-section">
+            <div class="thank-you-text">
+                <span class="thank-you-word">සංවර්ධන</span>
+                <span class="thank-you-word">වැඩකටයුතු</span>
+                <span class="thank-you-word">වලට</span>
+                <span class="thank-you-word">දායක</span>
+                <span class="thank-you-word">වු</span>
+                <span class="thank-you-word">සැමට</span>
+                <span class="thank-you-word">ගම්වාසින්ගේ</span>
+                <span class="thank-you-word">විශේෂ</span>
+                <span class="thank-you-word">ස්තුතිය</span>
+                <div class="thank-you-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+            </div>
+            <div class="thank-you-subtitle">
+                <i class="fas fa-hands-helping"></i>
+               
+                <i class="fas fa-hands-helping"></i>
+            </div>
+        </div>
 
-ඔබත් දායක වන්න </h5>
-            <h1>ඔබේ සහයෝගය ගමේ ශක්තියයි </h1>
-
-            <img src="3.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
-            <img src="5.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
-            <img src="4.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
-            <img src="6.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
-            <img src="7.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
-            <img src="8.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
-            <img src="9.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
-            <img src="10.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
-            <img src="11.jpeg" alt="Girl in a jacket" width="500" 
-
-height="500">
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2 class="contact-title">
+                <i class="fas fa-phone-alt"></i> දායකත්වය සදහා අමතන්න / Contact for Donations
+                <i class="fas fa-phone-alt"></i>
+            </h2>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="contact-name">රුවන්</div>
+                    <div class="contact-phone">
+                        <i class="fas fa-phone"></i> 074-2325708
+                    </div>
+                    <div class="contact-role"></div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="contact-name">සුඡිත් ශාන්ත </div>
+                    <div class="contact-phone">
+                        <i class="fas fa-phone"></i> 072-3283588
+                    </div>
+                    <div class="contact-role"></div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="contact-name">සුනන්ත</div>
+                    <div class="contact-phone">
+                        <i class="fas fa-phone"></i> 078-9326209
+                    </div>
+                    <div class="contact-role"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header gallery-section">
+            <h2 class="gallery-title">
+                <i class="fas fa-hands"></i> වැලි මැටොල් සිමින්ති හෝ මුදල් ලබා දි මේ සදහා ඔබත් දායක වන්න 
+                <i class="fas fa-hands"></i>
+            </h2>
+            <h1 class="community-strength">
+                <i class="fas fa-heartbeat"></i> ඔබේ සහයෝගය ගමේ ශක්තියයි 
+                <i class="fas fa-heartbeat"></i>
+            </h1>
+          
+            <div class="gallery">
+                <img src="3.jpeg" alt="Development work">
+                <img src="5.jpeg" alt="Development work">
+                <img src="4.jpeg" alt="Development work">
+                <img src="6.jpeg" alt="Development work">
+                <img src="7.jpeg" alt="Development work">
+                <img src="8.jpeg" alt="Development work">
+                <img src="9.jpeg" alt="Development work">
+                <img src="10.jpeg" alt="Development work">
+                <img src="11.jpeg" alt="Development work">
+                <img src="16.jpeg" alt="Development work">
+            </div>
         </div>
     </div>
-
+   
     <script src="script.js"></script>
 </body>
 </html>
