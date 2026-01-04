@@ -62,7 +62,7 @@ function renderDonors() {
         <div class="donor-card">
             <img src="${donor.photo}" alt="${donor.name}" class="donor-photo" onerror="this.src='https://via.placeholder.com/120'">
             <div class="donor-name">${donor.name}</div>
-            <div class="donor-description">${donor.description || '.....'}</div>
+            <div class="donor-description">${donor.description || 'මුදල්මය දායකත්වය'}</div>
             ${isAdminMode ? `<button class="delete-btn" onclick="deleteDonor(${index})">ඉවත් කරන්න / Remove</button>` : ''}
         </div>
     `).join('');
@@ -127,3 +127,4 @@ document.getElementById('bulkForm').addEventListener('submit', function(e) {
 
 // Initialize
 loadDonors();
+
