@@ -1,8 +1,8 @@
 // Default donors
 const defaultDonors = [
-    { photo: "1.jpg", name: "සුරංග කොන්ගහ ගෙදර", amount: "42000" },
-    { photo: "2.jpg", name: "ප්‍රබාත්", amount: "25000" },
-    { photo: "3.jpg", name: "ප්‍රසන්න ගීත් කුලියාපිටිය", amount: "15000" }
+    { photo: "1.jpg", name: "සුරංග කොන්ගහ ගෙදර", amount: "00" },
+    { photo: "2.jpg", name: "ප්‍රබාත්", amount: "00" },
+    { photo: "3.jpg", name: "ප්‍රසන්න ගීත් කුලියාපිටිය", amount: "00" }
 ];
 
 let donors = [];
@@ -126,4 +126,5 @@ document.getElementById('bulkForm').addEventListener('submit', function(e) {
 });
 
 // Initialize
+
 loadDonors();
