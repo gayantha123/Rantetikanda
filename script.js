@@ -1,8 +1,8 @@
 // Default donors
 const defaultDonors = [
-    { photo: "14.png", name: "ගරු සභාපති සුමනදාස ", description: "රිදිගම ප්‍රාදේශිය සභාව මාර්ගය සකස් කිරිමට යන්ත්‍ර සුත්‍ර ලබාදිමට කටයුතු සිදු කිරිම" },
-    { photo: "12.png", name: "විදුලි අධිකාරී ES ප්‍රසාද් මහතා", description: "කඩිනමින් විදුලිය ලබාදිමට කටයුතු සිදුකිරිම" },
-    { photo: "13.png", name: "TO විඡය බන්ඩාර මහතා", description: "මාර්ගය සකස් කිරිමට යන්ත්‍ර සුත්‍ර ලබාදිමට කටයුතු සිදු කිරිම" },
+    { photo: "14.jpeg", name: "ගරු සභාපති සුමනදාස ", description: "රිදිගම ප්‍රාදේශිය සභාව මාර්ගය සකස් කිරිමට යන්ත්‍ර සුත්‍ර ලබාදිමට කටයුතු සිදු කිරිම" },
+    { photo: "12.jpeg", name: "විදුලි අධිකාරී ES ප්‍රසාද් මහතා", description: "කඩිනමින් විදුලිය ලබාදිමට කටයුතු සිදුකිරිම" },
+    { photo: "13.jpeg", name: "TO විඡය බන්ඩාර මහතා", description: "මාර්ගය සකස් කිරිමට යන්ත්‍ර සුත්‍ර ලබාදිමට කටයුතු සිදු කිරිම" },
     { photo: "1.jpg", name: "සුරංග කොන්ගහ ගෙදර", description: "" },
     { photo: "2.jpeg", name: "ප්‍රබාත්", description: "" },
     { photo: "3.jpg", name: "ප්‍රසන්න ගීත් කුලියාපිටිය", description: "" }
@@ -131,3 +131,4 @@ document.getElementById('bulkForm').addEventListener('submit', function(e) {
 
 // Initialize
 loadDonors();
+
